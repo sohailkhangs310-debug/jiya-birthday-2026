@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --font-handwriting: "Caveat", cursive;
+
+  --color-brand-yellow: #CA8A04;
+  --color-brand-cream: #FDF9F1;
+  --color-brand-dark: #2A2A2A;
+}
+
+body {
+  background-color: var(--color-brand-cream);
+  color: var(--color-brand-dark);
+  font-family: var(--font-sans);
+  overflow: hidden; /* Prevent scrolling, let the flipbook handle it */
+}
+
+/* Custom styles for the page flip library to hide overflowing shadows if any */
+.flip-book {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+}
+
+.page {
+  background-color: var(--color-brand-cream);
+  color: var(--color-brand-dark);
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.05); /* Slight page dimension */
+  background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+}
+
+.page-cover {
+  background-color: var(--color-brand-yellow);
+  color: var(--color-brand-cream);
+  border: 4px solid var(--color-brand-cream);
+}
+
+.polaroid-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.stamp-border {
+  /* Creating a stamp zigzag border effect */
+  background-color: var(--color-brand-yellow);
+  mask-image: radial-gradient(circle at 10px 10px, transparent 10px, red 11px);
+  mask-position: -10px -10px;
+  mask-size: 20px 20px;
+}
